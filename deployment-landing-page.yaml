@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: contoh-landing-page
+  name: contoh-landing-page
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contoh-landing-page
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: contoh-landing-page
+    spec:
+      containers:
+      - image: giovana02/landing-page:1
+        name: landing-page
+        resources: {}
+status: {}
