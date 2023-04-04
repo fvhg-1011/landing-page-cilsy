@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  cobain-landing:
+    image: landing-page:1
+    ports:
+      - 8080:80
+  cobain-wordpress:
+    image: wordpress:php8.1
+    ports:
+      - 8081:80
+  cobain-mysql:
+    image: mysql:8.0-debian
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=favianhugo27
+      - MYSQL_USER=favianhugo
+      - MYSQL_PASSWORD=favianhugo27 
